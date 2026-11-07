@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Roxy AI - Bot WhatsApp</title>
+<meta name="description" content="Roxy AI, bot WhatsApp buatan Yann untuk stiker, download, AI, game, dan banyak lagi.">
+<meta name="theme-color" content="#e5e7ec">
+<link id="fav" rel="icon" href="/assets/img/bot.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-page="home" class="lock">
+
+<div id="ld" role="status" aria-label="Memuat">
+ <span class="dc"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/></svg></span><span class="dc"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg></span><span class="dc"><svg viewBox="0 0 24 24"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg></span><span class="dc"><svg viewBox="0 0 24 24"><path d="M12 21C4 14 2 10 2 7a5 5 0 0110-1 5 5 0 0110 1c0 3-2 7-10 14z"/></svg></span><span class="dc"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/></svg></span><span class="dc"><svg viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/></svg></span>
+ <div class="ldb">
+  <div class="ldt" id="ldt">Roxy AI</div>
+  <div class="track"><div class="fill" id="lf"></div><div class="ball" id="lb"><div class="bi"><img class="bot" id="ldimg" src="/assets/img/bot.jpg" alt=""></div></div></div>
+  <div class="pct" id="lp">0%</div><span class="pill msg" id="lm">Menyapa server</span>
+ </div>
+</div>
+
+<header class="top">
+ <a class="brand" href="#home"><span class="face face-slot"></span><span data-bind="botName">Roxy AI</span></a>
+ <div class="hr">
+  <button class="mu off" id="mu" aria-label="Musik"><svg class="i" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></button>
+  <div class="mw">
+   <button class="mb" id="mb" aria-label="Menu" aria-expanded="false" aria-controls="dd"><span></span><span></span><span></span></button>
+   <nav class="dd" id="dd"></nav>
+  </div>
+ </div>
+</header>
+
+<main>
+<section class="view hero" id="v-home">
+ <div class="avw"><img class="big bot" id="botimg" src="/assets/img/bot.jpg" alt="Foto bot"><span class="bub">Halo!</span></div>
+ <h1 data-bind="botName">Roxy AI</h1>
+ <div class="card prose" style="margin-top:22px;text-align:left">
+  <p>Roxy AI adalah bot WhatsApp buatan Yann. Isinya macam-macam: bikin stiker, download video dan lagu, ngobrol sama AI, main tebak-tebakan, sampai cek jadwal sholat. Semuanya lewat chat biasa, jadi tidak ada aplikasi yang perlu dipasang.</p>
+  <p>Mau coba? Masuk ke grup bot, daftar dulu dengan mengetik <code>.daftar nama,umur,gender</code>, lalu kirim perintahnya. Kasih jeda sekitar lima detik antar perintah supaya tidak dianggap spam.</p>
+  <p>Kadang botnya mati atau lemot. Biasanya cukup ditunggu, nanti owner yang membereskan.</p>
+  <p>Aturan lengkap, daftar perintah, dan kontak owner ada di menu pojok kanan atas.</p>
+ </div>
+ <div class="cta"><a class="btn" href="#" data-first="groups" target="_blank" rel="noopener">Gabung Grup</a><a class="btn alt" href="#fitur">Lihat Fitur</a></div>
+</section>
+
+<section class="view" id="v-rules" hidden><div class="vh"><div class="ib c-red"><svg class="i" viewBox="0 0 24 24"><path d="M7 3h8l4 4v14H7zM15 3v4h4M10 12h6M10 16h6"/></svg></div><h2>Rules</h2></div>
+ <div class="card"><ul class="bl">
+  <li>Dilarang spam, jeda minimal 5 detik antar perintah</li>
+  <li>Dilarang private chat ke nomor bot</li>
+  <li>Dilarang menambahkan bot sebelum sewa</li>
+  <li>Pelanggar akan dikenai <b>blacklist</b> permanen</li>
+  <li>Gunakan prefix <code>yang ada</code> di setiap perintah</li>
+  <li>Wajib daftar terlebih dahulu, ketik <code>.daftar nama,umur,gender</code></li>
+  <li>Bot kadang bisa mati, jika mati harap tunggu <code>owner</code> memperbaikinya</li>
+ </ul></div>
+</section>
+
+<section class="view" id="v-fitur" hidden><div class="vh"><div class="ib c-green"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></div><h2>Fitur</h2></div>
+ <label class="search"><input id="q" type="search" placeholder="Cari perintah, misal: sticker" autocomplete="off"></label>
+ <div id="fbody"></div>
+</section>
+
+<section class="view" id="v-terkait" hidden><div class="vh"><div class="ib c-orange"><svg class="i" viewBox="0 0 24 24"><path d="M10 14a5 5 0 007 0l3-3a5 5 0 00-7-7l-1 1M14 10a5 5 0 00-7 0l-3 3a5 5 0 007 7l1-1"/></svg></div><h2>Terkait</h2></div><div class="lg" id="lWeb"></div></section>
+
+<section class="view" id="v-info" hidden><div class="vh"><div class="ib c-cyan"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg></div><h2>Info</h2></div>
+ <div class="card"><ul class="bl">
+  <li>Prefix perintah <code>.</code> atau <code>/</code></li>
+  <li>Jumlah kategori menu <code id="nCat">21</code></li>
+  <li>Pilihan tampilan menu <code>V1</code> sampai <code>V13</code></li>
+  <li>AI, downloader, search, maker, stiker, game, RPG, tools, dan banyak lagi</li>
+  <li>Alat bantu grup, fitur owner, premium, dan toko</li>
+ </ul></div>
+</section>
+
+<section class="view" id="v-saluran" hidden><div class="vh"><div class="ib c-purple"><svg class="i" viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0112 0v6l2 2H4zM10 21h4"/></svg></div><h2>Saluran</h2></div><div class="lg" id="lCh"></div></section>
+<section class="view" id="v-grup" hidden><div class="vh"><div class="ib c-yellow"><svg class="i" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.5 3-5.5 7-5.5s7 2 7 5.5M16 4.5a3.5 3.5 0 010 7M18 14.5c2.5.5 4 2.2 4 5.5"/></svg></div><h2>Grup</h2></div><div class="lg" id="lGr"></div></section>
+<section class="view" id="v-owner" hidden><div class="vh"><div class="ib c-ink"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><h2>Owner</h2></div>
+ <div class="card"><div class="rows" id="devRows"></div></div>
+</section>
+<footer>&copy; 2025-2026 <b id="ftrName">Roxy AI</b> &middot; yannaimd.my.id</footer>
+</main>
+<script src="/assets/js/menus.js"></script>
+<script src="/assets/js/app.js"></script>
+</body>
+</html>
