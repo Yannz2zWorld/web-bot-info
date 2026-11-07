@@ -1,0 +1,42 @@
+{
+  "botName": "Roxy AI",
+  "dev": "Yann",
+  "telegram": "yannz2z",
+  "tiktok": "YannAjah",
+  "favicon": "",
+  "botImg": "https://cdn.apiz2z.web.id/cdn/bdf5848821663258ed6113c8b17595a7.jpg",
+  "loadImg": "https://cdn.apiz2z.web.id/cdn/d94b781d462596ae21ea3d845e3b480e.jpg",
+  "music": "",
+  "musicOn": true,
+  "musicVol": 0.4,
+  "store": {
+    "label": "Website Terkait",
+    "url": "https://ys-digital.store/"
+  },
+  "api": {
+    "label": "Web REST API",
+    "url": "https://apiz2z.web.id/"
+  },
+  "owners": [
+    {
+      "label": "WhatsApp 1",
+      "wa": "6285282426298"
+    },
+    {
+      "label": "WhatsApp 2",
+      "wa": "628135779643"
+    }
+  ],
+  "channels": [
+    {
+      "name": "Saluran Bot",
+      "url": "https://whatsapp.com/channel/0029VbCBj0N3LdQTosP3Hj0T"
+    }
+  ],
+  "groups": [
+    {
+      "name": "Grup Bot",
+      "url": "https://chat.whatsapp.com/Ge8JHVR49BR1ecpzqvg67x"
+    }
+  ]
+}
